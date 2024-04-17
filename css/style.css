@@ -267,17 +267,50 @@ body{
 
 @media screen and (max-width:930px) {
     .navgatior{
-        display: block;
+        display: flex;
         text-align: left;
+        justify-content: space-between;
         position: relative;
+        height: 10vh;
+        z-index: 1000;
+    }
+    .navgatior .logo{
+      margin: 12px 20px;
+    }
+    .navgatior .burguer-menu{
+        width: 40px;
+        height: 40px;
+        background-color: #ED5D00;
+        margin: 12px 20px;
+        padding: 6px;
+        cursor: pointer;
+        border: 1px dashed #ED5D00;
+        transition: all .5s ease-in-out;
+    }
+    .navgatior .burguer-menu.border{
+        border: 1px dashed #ED5D00;
+        background-color: transparent;
+
+    }
+    .navgatior .burguer-menu img{
+      
+        width: 100%;
     }
     .navgatior .menu-case{
         display: block;
-        height: auto;
         width: 100%;
+        position: absolute;
         background-color: white;
-        z-index: 1000;
-        padding: 20px;
+        z-index: 100;
+        padding: 10px;
+        top: 10vh;
+        height: 0;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+    .navgatior .menu-case.drop{
+        height: 350px;
+        overflow: auto;
     }
     .navgatior .menu-case li{
         display: inline-block;
