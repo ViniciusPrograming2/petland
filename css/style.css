@@ -3,6 +3,8 @@
     --font-familly: 'Montserrat';
     --font-weight: bold;
     --font-zise: clamp(1em,8vw,.50em);
+    --size-social: 14px;
+    --width-icon:20px;
 }
 *{
     padding: 0;
@@ -93,7 +95,9 @@ body{
 }
 .container-card{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,300px));
+    align-items: center;
+    justify-content: center;
     margin: 4em 1.4em;
     gap: 20px;
 }
@@ -133,14 +137,14 @@ body{
 }
 .container-card .text-gruop .btn .btn-1{
     background-color: #ED5D00;
-    padding: .80em .60em;
+    padding: .80em .40em;
     border: #ED5D00 1px solid;
     transition: all .5s ease-in-out;
-    font-size: 1.4em;
+    font-size: 1em;
+    border-radius: 12px;
 }
 .container-card .text-gruop .btn .btn-1:hover{
     background-color: white;
-    padding: .80em .60em;
     border: #ED5D00 1px solid;
 }
 .container-card .text-gruop .btn a{
@@ -158,7 +162,7 @@ body{
     color: #ED5D00;
 }
 .produtcs .text-case{
-    margin: 0 2em;
+    margin: 3em 2em;
 }
 .produtcs .text-case h1{
    font-size: 2.5em;
@@ -264,13 +268,21 @@ body{
 @media screen and (max-width:930px) {
     .navgatior{
         display: block;
-        text-align: center;
+        text-align: left;
+        position: relative;
     }
     .navgatior .menu-case{
-        display: none;
+        display: block;
+        height: auto;
+        width: 100%;
+        background-color: white;
+        z-index: 1000;
+        padding: 20px;
     }
     .navgatior .menu-case li{
-        padding: 0;
+        display: inline-block;
+        padding: .60em .90em;
+        width: 100%;
     }
     .produtcs-container{
         display: block;
@@ -279,14 +291,14 @@ body{
     }
     .produtcs-container .cd-text{
         width: 100%;
-        margin-top: 20px;
         text-align: center;
+        padding: 0 12px;
     }
     .produtcs-container .cd-text p{
         font-size: clamp(.9em,4vw,.80em);
         font-weight: 400;
         line-height: 1.5;
-        text-align: center;
+        text-align: left;
         margin-top: 12px;
     }
     .produtcs-container .case-img{
@@ -300,7 +312,7 @@ body{
     .produtcs-container .cd-icons .img-dog{
         display: block;
         width: 100%;
-        margin: 0 auto;
+        margin: 20px auto;
         text-align: center;
     }
     .produtcs-container .cd-icons .img-dog img{
@@ -311,12 +323,12 @@ body{
         align-items: center;
         justify-content: center;
         width: 100%;
-        gap: 20px;
+        gap: 40px;
     }
     .produtcs-container .cd-icons .icons-social .face a{
         text-decoration: none;
         color: #ED5D00;
-        font-size: var(--font-zise);
+        font-size: var(--size-social);
         font-weight: 500;
     }
     .produtcs-container .cd-icons .icons-social .instagram{
@@ -330,15 +342,31 @@ body{
         justify-content: center;
     }
     .produtcs-container .cd-icons .icons-social .face img{
-        width: 30px;
+        width: var(--width-icon);
     }
     .produtcs-container .cd-icons .icons-social .instagram img{
-        width: 30px;
+        width: var(--width-icon);
     }
     .produtcs-container .cd-icons .icons-social .instagram a{
         text-decoration: none;
         color: #ED5D00;
-        font-size: var(--font-zise);
+        font-size: var(--size-social);
         font-weight: 500;
+    }
+    .produtcs .text-case p{
+        font-size: clamp(.9em,4vw,1.10em);
+        font-weight: 300;
+        margin: .45em 0;
+        line-height: 1.4;
+     }
+     
+}
+@media screen and (max-width:360px) {
+    .produtcs-container .cd-icons .icons-social{
+       display: block;
+       gap: 0;
+    }
+    .produtcs-container .cd-icons .icons-social .face{
+        margin: 12px 0;
     }
 }
