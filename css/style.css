@@ -34,6 +34,9 @@ body{
     list-style: none;
     gap: 4px;
 }
+.navgatior .burguer-menu{
+    display: none;
+}
 .navgatior .menu-case li{
     padding: .50em;
 }
